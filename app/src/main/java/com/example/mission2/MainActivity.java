@@ -14,12 +14,12 @@ import java.util.ArrayList;
 
 import model.user;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements OnCardListener{
 
-    private Toolbar toolbar;
-    private RecyclerView RecyclerView;
-    private FloatingActionButton add;
-    private ArrayList<user> list;
+    RecyclerView RecyclerView;
+    FloatingActionButton add;
+    ArrayList<user> list;
+    int id;
 
 
     @Override
@@ -42,11 +42,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void intiView() {
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         RecyclerView = findViewById(R.id.RecyclerView);
         add = findViewById(R.id.add);
 
-        //toolbar.setTitle("User's List");
         list = new ArrayList<user>();
+    }
+
+    @Override
+    public void onCardClick(int position) {
+
     }
 }

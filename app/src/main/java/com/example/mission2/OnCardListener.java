@@ -1,5 +1,5 @@
 package com.example.mission2;
 
-public interface onCardListener {
+public interface OnCardListener {
     void onCardClick(int position);
 }
